@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="C:\\Users\\Acer\\Desktop\\cucumber\\CucumberTask\\src\\test\\resources",glue="com.stepdefinition",
-plugin= {"json:C:\\Users\\Acer\\Desktop\\cucumber\\CucumberTask\\src\\test\\resources\\Reporting.json"},
+plugin= {"json:C:\\Users\\Acer\\Desktop\\cucumber\\CucumberTask\\src\\test\\resources\\report.json"},
 tags= {"@smoke"},dryRun=false,monochrome=true)
 public class TestRunner {
 	

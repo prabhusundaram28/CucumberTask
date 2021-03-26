@@ -9,8 +9,9 @@ Feature: Verifying the adactin cancel booking details
     And click select button and cancel the order
 
     Examples: 
-      | username         | password    |
-      | prabhusundaram28 | Prabhu@1996 |
+      | username  | password |
+      | dinu00007 | 7DZCF3   |
+
   @smoke
   Scenario Outline: Verify the adactin Cancel booking with new orderId
     Given user is on the adactin webpage
@@ -27,5 +28,5 @@ Feature: Verifying the adactin cancel booking details
     Then user should search the orderId and calcel the order
 
     Examples: 
-      | username         | password    | location | hotels         | roomtype | noofrooms | checkInDate | checkOutDate | adultsperroom | childperroom | fname  | lname  | address   | ccnum            | ccType | expMonth | expyaer | cvvNum |
-      | prabhusundaram28 | Prabhu@1996 | Sydney   | Hotel Sunshine | Standard | 1 - One   | 25/03/2021  | 26/03/2021   | 1 - One       | 1 - One      | prabhu | kalyan | perungudi | 1234567890123456 | VISA   | July     |    2022 |    123 |
+      | username  | password | location | hotels         | roomtype | noofrooms | checkInDate | checkOutDate | adultsperroom | childperroom | fname  | lname | address | ccnum            | ccType | expMonth | expyaer | cvvNum |
+      | dinu00007 | 7DZCF3   | Sydney   | Hotel Sunshine | Standard | 1 - One   | 25/03/2021  | 26/03/2021   | 1 - One       | 1 - One      | dinesh | k     | ngl     | 1234567890123456 | VISA   | July     |    2022 |    123 |

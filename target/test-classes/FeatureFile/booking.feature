@@ -1,6 +1,6 @@
 Feature: Verifying the adactin booking details
-@smoke
 
+  @smoke
   Scenario Outline: Verify the adactin booking with all fields
     Given user is on the adactin webpage
     When user should enter "<username>" and "<password>"
@@ -14,9 +14,10 @@ Feature: Verifying the adactin booking details
     And user should print the orderId num
 
     Examples: 
-      | username         | password    | location | hotels         | roomtype | noofrooms | checkInDate | checkOutDate | adultsperroom | childperroom | fname  | lname  | address   | ccnum            | ccType | expMonth | expyaer | cvvNum |
-      | prabhusundaram28 | Prabhu@1996 | Sydney   | Hotel Sunshine | Standard | 1 - One   | 25/03/2021  | 26/03/2021   | 1 - One       | 1 - One      | prabhu | kalyan | perungudi | 1234567890123456 | VISA   | July     |    2022 |    123 |
-@smoke
+      | username  | password | location | hotels         | roomtype | noofrooms | checkInDate | checkOutDate | adultsperroom | childperroom | fname  | lname | address | ccnum            | ccType | expMonth | expyaer | cvvNum |
+      | dinu00007 | 7DZCF3   | Sydney   | Hotel Sunshine | Standard | 1 - One   | 25/03/2021  | 26/03/2021   | 1 - One       | 1 - One      | dinesh | k     | ngl     | 1234567890123456 | VISA   | July     |    2022 |    123 |
+
+  @smoke
   Scenario Outline: Verify the adactin booking without enter any field
     Given user is on the adactin webpage
     When user should enter "<username>" and "<password>"
@@ -29,5 +30,5 @@ Feature: Verifying the adactin booking details
     And user should verify the booknow error message
 
     Examples: 
-      | username         | password    | location | hotels         | roomtype | noofrooms | checkInDate | checkOutDate | adultsperroom | childperroom |
-      | prabhusundaram28 | Prabhu@1996 | Sydney   | Hotel Sunshine | Standard | 1 - One   | 25/03/2021  | 26/03/2021   | 1 - One       | 1 - One      |
+      | username  | password | location | hotels         | roomtype | noofrooms | checkInDate | checkOutDate | adultsperroom | childperroom |
+      | dinu00007 | 7DZCF3   | Sydney   | Hotel Sunshine | Standard | 1 - One   | 25/03/2021  | 26/03/2021   | 1 - One       | 1 - One      |
