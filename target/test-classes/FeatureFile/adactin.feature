@@ -1,6 +1,6 @@
-
 Feature: Verifying the adactin webpage
-	@smoke
+
+  @smoke
   Scenario Outline: Verifying the adactin webpage with all valid credentails
     Given user is on the adactin webpage
     When user should enter "<username>" and "<password>"
@@ -14,9 +14,10 @@ Feature: Verifying the adactin webpage
     And user should print the orderId num
 
     Examples: 
-      | username         | password    | location | hotels         | roomtype | noofrooms | checkInDate | checkOutDate | adultsperroom | childperroom | fname  | lname  | address   | ccnum            | ccType | expMonth | expyaer | cvvNum |
-      | prabhusundaram28 | Prabhu@1996 | Sydney   | Hotel Sunshine | Standard | 1 - One   | 25/03/2021  | 26/03/2021   | 1 - One       | 1 - One      | prabhu | kalyan | perungudi | 1234567890123456 | VISA   | July     |    2022 |    123 |
-	@smoke
+      | username  | password | location | hotels         | roomtype | noofrooms | checkInDate | checkOutDate | adultsperroom | childperroom | fname  | lname | address | ccnum            | ccType | expMonth | expyaer | cvvNum |
+      | dinu00007 | 7DZCF3   | Sydney   | Hotel Sunshine | Standard | 1 - One   | 25/03/2021  | 26/03/2021   | 1 - One       | 1 - One      | dinesh | k     | ngl     | 1234567890123456 | VISA   | July     |    2022 |    123 |
+
+  @smoke
   Scenario Outline: Verifying mandatory functions only
     Given user is on the adactin webpage
     When user should enter "<username>" and "<password>"
@@ -30,9 +31,10 @@ Feature: Verifying the adactin webpage
     And user should print the orderId num
 
     Examples: 
-      | username         | password    | location | noOfRooms | checkInDate | checkOutDate | adultsperroom | childperroom | fname  | lname  | address   | ccnum            | ccType | expMonth | expyaer | cvvNum |
-      | prabhusundaram28 | Prabhu@1996 | Sydney   | 1 - One   | 25/03/2021  | 26/03/2021   | 1 - One       | 1 - One      | prabhu | kalyan | perungudi | 1234567890123456 | VISA   | July     |    2022 |    123 |
-	@smoke
+      | username  | password | location | noOfRooms | checkInDate | checkOutDate | adultsperroom | childperroom | fname  | lname | address | ccnum            | ccType | expMonth | expyaer | cvvNum |
+      | dinu00007 | 7DZCF3   | Sydney   | 1 - One   | 25/03/2021  | 26/03/2021   | 1 - One       | 1 - One      | dinesh | krish | ngl     | 1234567890123456 | VISA   | July     |    2022 |    123 |
+
+  @smoke
   Scenario Outline: Verifying checkIn date and checkOut date
     Given user is on the adactin webpage
     When user should enter "<username>" and "<password>"
@@ -40,12 +42,12 @@ Feature: Verifying the adactin webpage
     Then user should enter "<location>","<hotels>","<roomtype>","<noofrooms>","<checkInDate>","<checkOutDate>","<adultsperroom>"and"<childperroom>"
     Then user should click search button
     Then user should verify the error message
-    
 
     Examples: 
-      | username         | password    | location | hotels         | roomtype | noofrooms | checkInDate | checkOutDate | adultsperroom | childperroom | 
-      | prabhusundaram28 | Prabhu@1996 | Sydney   | Hotel Sunshine | Standard | 1 - One   | 20/03/2021  | 18/02/2021   | 1 - One       | 1 - One      | 
-	 @smoke
+      | username  | password | location | hotels         | roomtype | noofrooms | checkInDate | checkOutDate | adultsperroom | childperroom |
+      | dinu00007 | 7DZCF3   | Sydney   | Hotel Sunshine | Standard | 1 - One   | 20/03/2021  | 18/02/2021   | 1 - One       | 1 - One      |
+
+  @smoke
   Scenario Outline: Verifying without enter any fields to click search hotel button
     Given user is on the adactin webpage
     When user should enter "<username>" and "<password>"
@@ -54,5 +56,5 @@ Feature: Verifying the adactin webpage
     Then user should verify empty error message
 
     Examples: 
-      | username         | password    |
-      | prabhusundaram28 | Prabhu@1996 |
+      | username  | password |
+      | dinu00007 | 7DZCF3   |
