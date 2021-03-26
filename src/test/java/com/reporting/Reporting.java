@@ -10,9 +10,9 @@ import net.masterthought.cucumber.ReportBuilder;
 public class Reporting {
 	
 	public static void generateReport(String jsonFile) {
-		Configuration c=new Configuration(new File("D:\\Workspace\\CucumberTask\\src\\test\\resources\\Reporting"), "Adactin");
+		Configuration c=new Configuration(new File("C:\\Users\\Acer\\Desktop\\cucumber\\CucumberTask\\src\\test\\resources\\Reporting"), "Adactin");
 		c.addClassifications("Browser", "chrome");
-		c.addClassifications("Browser Version", "35.01.01");
+		c.addClassifications("Browser Version", "88");
 		c.addClassifications("os", "window");
 		
 		List<String> jsonFiles=new ArrayList<String>();
@@ -25,3 +25,4 @@ public class Reporting {
 	
 
 }
+//D:\\Workspace\\CucumberTask\\src\\test\\resources\\Reporting
